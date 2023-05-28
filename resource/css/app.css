@@ -1,0 +1,241 @@
+/* Importar Google Fonts Poppins */
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap');
+
+
+/* CSS Variables */
+
+:root {
+    --hFont: 'Poppins', sans-serif;
+    --pFont: 'DM Sans', sans-serif;
+    --themeColor: #2A9D8F;
+    --bgColor: #191919;
+    --Color: #fff;
+}
+
+
+/* CSS Reset */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Convert rem to px */
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; /* 1rem = 10px */
+ }
+ 
+ *, *:before, *:after {
+    box-sizing: inherit;
+ }
+
+ img {
+    max-width: 100%;
+    display: block;
+}
+ 
+/* CSS Inicio */
+.inicio {
+    background-color: var(--bgColor);
+    position: relative;
+}
+
+.inicio::before {
+    content: '';
+    width: 20%;
+    height: 100%;
+    background-color: var(--themeColor);
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-bottom-right-radius: 2rem;
+}
+
+.contenedor {
+    padding: 5rem 5%;
+}
+
+.inicio .inicio-col {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.inicio .inicio-col .inicio-img img{
+    background-color: black;
+    border-radius: 2rem;
+    filter: grayscale(100%);
+    transition: 1s;
+    width: 60rem;
+}
+
+.inicio .inicio-col .inicio-img img:hover{
+    filter: grayscale(0%);
+}
+
+.inicio .inicio-col .inicio-info {
+    padding-left: 1rem;
+}
+
+.inicio .inicio-col .inicio-info h1 {
+    color: var(--Color);
+    font-family: var(--hFont);
+    font-size: 5rem;
+    font-weight: 600;
+}
+
+.inicio .inicio-col .inicio-info h1 span{
+    color: var(--themeColor);
+    font-weight: 700;
+}
+
+.inicio .inicio-col .inicio-info p{
+    color: var(--Color);
+    font-family: var(--pFont);
+    font-size: 1.8rem;
+    letter-spacing: 0.5px;
+    margin-top: 2rem;
+}
+
+.inicio .inicio-col .inicio-info a{
+    display: inline-block;
+    margin-top: 2rem;
+    text-decoration: none;
+    color: var(--themeColor);
+    font-family: var(--pFont);
+    font-size: 1.8rem;
+    font-weight: 500;
+    padding: 1rem 2rem;
+    border: 2px solid var(--themeColor);
+    border-radius: 2rem;
+    position: relative;
+    transition: 0.5s;
+}
+
+.inicio .inicio-col .inicio-info a:hover{
+    color: var(--bgColor);
+    background-color: var(--themeColor);
+}
+
+.inicio .inicio-col .inicio-menu .menu-opcion {
+    margin: 4rem 0;
+    position: relative;
+}
+
+.inicio .inicio-col .inicio-menu .menu-opcion span {
+    background-color: rgb(148, 148, 148);
+    color: var(--Color);
+    font-family: var(--pFont);
+    font-size: 1.8rem;
+    font-weight: 400;
+    padding: 1.5rem 0;
+    width: 10rem;
+    text-align: center;
+    position: absolute;
+    top: -2rem;
+    left: -10rem;
+    border-radius: 2rem;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.inicio .inicio-col .inicio-menu .menu-opcion:hover span {
+    opacity: 1;
+}
+
+.inicio .inicio-col .inicio-menu .menu-opcion a {
+    display: inline-block;
+    text-decoration: none;
+    color: var(--Color);
+    font-family: var(--pFont);
+    font-size: 1.8rem;
+    font-weight: 500;
+    padding: 1rem 2rem;
+    border: 2px solid var(--themeColor);
+    border-radius: 2rem;
+    position: relative;
+    transition: 1s;
+}
+
+.inicio .inicio-col .inicio-menu .menu-opcion a:hover {
+    color: var(--bgColor);
+    background-color: var(--themeColor);
+}
+
+
+.inicio .inicio-col .inicio-menu .menu-opcion .active{
+    color: var(--bgColor);
+    background-color: var(--themeColor);
+}
+
+/* CSS Movil Inicio*/
+
+@media (max-width: 985px) 
+{
+    .inicio .inicio-col .inicio-menu{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        padding: 2rem;
+        background-color: rgba(0, 0, 0, 0.678);
+        margin: 0;
+    }
+
+    .inicio .inicio-col .inicio-menu .menu-opcion {
+        margin: 0.5rem;
+        position: relative;
+    }
+
+    .inicio .inicio-col .inicio-menu .menu-opcion span {
+        padding: 1.5rem 0;
+        width: 10rem;
+        top: -3rem;
+        left: -10rem;
+    }
+
+}
+
+@media (max-width: 768px) 
+{
+    .inicio::before {
+        width: 0%;
+    }
+
+    .inicio .contenedor {
+        padding: 5rem 4%;
+    }
+
+    .inicio .inicio-col {
+        flex-direction: column-reverse;
+        gap: 2rem;
+    }
+
+    .inicio .inicio-col .inicio-info {
+        text-align: center;
+        padding: 0;
+    }
+
+    .inicio .inicio-col .inicio-info h1 {
+        font-size: 4rem;
+    }
+
+    .inicio .inicio-col .inicio-info p {
+        font-size: 1.6rem;
+    }
+
+    .inicio .inicio-col .inicio-info img {
+        background-color: black;
+    }
+
+
+}
+
+/* CSS Inicio*/
+
