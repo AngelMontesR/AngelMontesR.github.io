@@ -397,3 +397,155 @@ html {
 }
 
 /* CSS Habilidades */
+
+.habilidad{
+    background-color: var(--bgColor);
+    padding: 4rem 1%;
+    position: relative;
+}
+
+.habilidad::after {
+    content: '';
+    width: 30%;
+    height: 1px;
+    background-color: lightslategray;
+    position: absolute;
+    top: 0;
+    left: 35%;
+}
+
+.habilidad h2{
+    color: var(--Color);
+    font-family: var(--hFont);
+    font-size: 4rem;
+    font-weight: 600;
+    text-align: center;
+    letter-spacing: 0.5px;
+    text-shadow: 0 0 15px var(--themeColor);
+    text-transform: uppercase;
+}
+
+.habilidad h2 span{
+    color: var(--themeColor);
+    font-weight: 700;
+}
+
+.habilidad .habilidad-col{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4rem;
+    margin-top: 4rem;
+}
+
+.habilidad .habilidad-col .habilidad-item{
+    border: 1px solid var(--Color);
+    border-radius: 2rem;
+    padding: 2rem;
+    height: 15rem;
+    transition: 0.5s;
+}
+
+.habilidad .habilidad-col .habilidad-item:hover{
+    translate: translateY(-10px);
+    box-shadow: 0 0 50px var(--Color);
+}
+
+.habilidad .habilidad-col .habilidad-item .habilidad-nombre{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.habilidad .habilidad-col .habilidad-item .habilidad-nombre h3{
+    font-family: var(--hFont);
+    color: var(--Color);
+    text-transform: capitalize;
+    font-size: 3rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+    font-style: italic;
+}
+
+.habilidad .habilidad-col .habilidad-item .habilidad-nombre p{
+    font-family: var(--hFont);
+    color: var(--Color);
+    text-transform: capitalize;
+    font-size: 3rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+    font-style: italic;
+}
+
+.habilidad .habilidad-col .habilidad-item .habilidad-barra-ext {
+    background-color: var(--Color);
+    height: 1rem;
+    position: relative;
+}
+
+.habilidad .habilidad-col .habilidad-item .habilidad-barra-ext .habilidad-barra-int{
+    background-color: var(--themeColor);
+    height: 1rem;
+}
+
+
+
+.porcentaje10{
+    width: 10%;
+}
+
+.porcentaje20{
+    width: 20%;
+}
+
+.porcentaje30{
+    width: 30%;
+}
+
+.porcentaje40{
+    width: 40%;
+}
+
+.porcentaje50{
+    width: 50%;
+}
+
+.porcentaje60{
+    width: 60%;
+}
+
+.porcentaje70{
+    width: 70%;
+}
+
+.porcentaje80{
+    width: 80%;
+}
+
+.porcentaje90{
+    width: 90%;
+}
+
+.porcentaje100{
+    width: 100%;
+}
+
+
+/* CSS Movil Habilidades */
+
+@media (max-width: 985px) 
+{
+    .habilidad .habilidad-col{
+        grid-template-columns: repeat(2, 1fr);
+        gap: 4rem;
+    }
+
+}
+
+@media (max-width: 500px) 
+{
+    .habilidad .habilidad-col{
+        grid-template-columns: repeat(1, 1fr);
+        gap: 4rem;
+    }
+
+}
