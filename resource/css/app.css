@@ -596,11 +596,7 @@ html {
 
 .portafolio .portafolio-col{
     display: grid;
-<<<<<<< HEAD
     grid-template-columns: repeat(3, 1fr);
-=======
-    grid-template-columns: repeat(4, 1fr);
->>>>>>> origin/master
     gap: 3rem;
     margin-top: 4rem;
     align-content: center;
@@ -690,7 +686,6 @@ html {
         gap: 4rem;
     }
 
-<<<<<<< HEAD
 }
 
 /* CSS Contacto */
@@ -883,6 +878,4 @@ input[type=submit]:hover{
     margin-top: 2rem;
     line-height: 1.5;
     text-align: center;
-=======
->>>>>>> origin/master
 }
