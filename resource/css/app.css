@@ -173,35 +173,37 @@ html {
 
 /* CSS Movil Inicio*/
 
-@media (max-width: 985px) 
-{
-    .inicio .inicio-col .inicio-menu{
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        position: fixed;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        padding: 2rem;
-        background-color: rgba(0, 0, 0, 0.678);
-        margin: 0;
+@media (max-width: 985px) {
+    .inicio-menu {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      padding: 2rem;
+      background-color: rgba(0, 0, 0, 0.678);
+      margin: 0;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      z-index: 999; /* Sirve para que el menu se vea por encima de todo */
     }
-
+  
     .inicio .inicio-col .inicio-menu .menu-opcion {
-        margin: 0.5rem;
-        position: relative;
+      margin: 0.5rem;
+      position: relative;
     }
-
+  
     .inicio .inicio-col .inicio-menu .menu-opcion span {
-        padding: 1.5rem 0;
-        width: 10rem;
-        top: -3rem;
-        left: -10rem;
+      padding: 1.5rem 0;
+      width: 10rem;
+      top: -3rem;
+      left: -10rem;
     }
 
-}
+  }
+  
+  
 
 @media (max-width: 768px) 
 {
